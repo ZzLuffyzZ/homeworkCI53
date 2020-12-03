@@ -1,0 +1,21 @@
+1.1
+    Web components là một tập các quy chuẩn công nghệ 
+dùng cho việc xây dựng các thành phần trang web được 
+đóng gói (tách biệt với phần code còn lại của ứng dụng) 
+và có thể tái sử dụng.
+
+1.2
+    - Custom Elements :Là một tập hợp các Javascript APIs cho phép chúng ta tạo ra
+element riêng với các tính chất và hành vi riêng để có thể dùng như các element mặc định ngoài UI
+Ex: customElements.define('word-count', WordCount, { extends: 'p' });
+    
+    - Shadow DOM:+ tạo, đính kèm và đóng gói một cây DOM vào một custom element 
+                 + cây DOM này render độc lập với cây DOM chính (window.document)
+điều khiển các chức năng liên quan
+                 + đóng gói các tính năng và styling của cây DOM, tránh xung đột ra các DOM elements bên ngoài
+Ex: let shadow = this.attachShadow({mode: 'open'});
+    
+    
+    - HTML templates: Gồm 2 thẻ <template> và <slot>, giúp chúng ta tạo ra HTML template
+mà nội dung bên trong 2 thẻ này sẽ ko đc render trực tiếp ra bên ngoài mà chỉ có thể attach 
+và sử dụng với shadow DOM
